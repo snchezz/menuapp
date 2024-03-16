@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Web</title>
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <style>
+    /* Estilos adicionales */
+    .mobile-nav {
+      display: none; /* Ocultar el nav en modo móvil */
+    }
+    @media only screen and (max-width: 600px) {
+      /* Estilos para modo móvil */
+      .desktop-nav {
+        display: none; /* Ocultar el nav en modo escritorio */
+      }
+      .mobile-nav {
+        display: flex;
+        justify-content: space-around;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        padding: 10px 0;
+        z-index: 1000;
+      }
+      .mobile-nav a {
+        color: white;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar para escritorio -->
+  <nav class="desktop-nav">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Logo</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Reservar</a></li>
+        <li><a href="#">Perfil</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Botones para modo móvil -->
+  <div class="mobile-nav">
+    <a href="#"><i class="material-icons">home</i></a>
+    <a href="#"><i class="material-icons">contact_mail</i></a>
+    <a href="#"><i class="material-icons">event_available</i></a>
+    <a href="#"><i class="material-icons">person</i></a>
+  </div>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
